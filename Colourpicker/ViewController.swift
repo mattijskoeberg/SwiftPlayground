@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+// Bottons and text fields
+    
+    @IBOutlet weak var nextColour: UIButton!
+    @IBOutlet weak var colourName: UILabel!
+    
+//
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

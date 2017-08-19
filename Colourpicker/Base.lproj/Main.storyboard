@@ -22,14 +22,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Next"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colour Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtU-Vo-AuA">
+                                <rect key="frame" x="137" y="253" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="PW1-gV-LX3" firstAttribute="top" secondItem="TtU-Vo-AuA" secondAttribute="bottom" constant="41.5" id="7Kc-wG-6hd"/>
+                            <constraint firstItem="TtU-Vo-AuA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BnT-nL-Zhe"/>
                             <constraint firstItem="PW1-gV-LX3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qyd-ka-wcv"/>
                             <constraint firstItem="PW1-gV-LX3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gkr-Fm-R0I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="colourName" destination="TtU-Vo-AuA" id="eUe-8O-pal"/>
+                        <outlet property="nextColour" destination="PW1-gV-LX3" id="jTH-qA-9Cx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
