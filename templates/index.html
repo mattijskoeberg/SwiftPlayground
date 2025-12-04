@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Strategic Analysis - Forensic Science Institute</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📄 PDF Strategic Analysis Tool</h1>
+            <p class="subtitle">For Strategic Innovation Advisors in Forensic Science</p>
+        </header>
+
+        <main>
+            <div class="upload-section" id="uploadSection">
+                <div class="upload-box">
+                    <div class="upload-icon">📎</div>
+                    <h2>Upload PDF Document</h2>
+                    <p>Upload a PDF to generate an AI-powered summary and strategic takeaways</p>
+
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <input type="file" id="pdfInput" name="pdf" accept=".pdf" required>
+                        <label for="pdfInput" class="file-label">
+                            <span id="fileName">Choose PDF file...</span>
+                        </label>
+                        <button type="submit" class="btn-primary" id="uploadBtn">
+                            Analyze Document
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="loading-section" id="loadingSection" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing document and generating insights...</p>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <div class="document-info">
+                    <h3>📋 Document: <span id="documentName"></span></h3>
+                </div>
+
+                <div class="summary-box">
+                    <h2>Executive Summary</h2>
+                    <div id="summaryContent" class="content-box">
+                        <!-- Summary will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="takeaways-box">
+                    <h2>Top 3 Strategic Takeaways</h2>
+                    <p class="context-note">For Strategic Innovation in Forensic Science</p>
+                    <div id="takeawaysContent" class="takeaways-list">
+                        <!-- Takeaways will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button onclick="window.print()" class="btn-secondary">🖨️ Print Report</button>
+                    <button onclick="resetAnalysis()" class="btn-secondary">📄 Analyze Another Document</button>
+                </div>
+            </div>
+
+            <div class="error-section" id="errorSection" style="display: none;">
+                <div class="error-box">
+                    <h3>❌ Error</h3>
+                    <p id="errorMessage"></p>
+                    <button onclick="resetAnalysis()" class="btn-primary">Try Again</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Claude AI | Strategic Innovation Analysis Tool</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
