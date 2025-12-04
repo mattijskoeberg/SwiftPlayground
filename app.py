@@ -108,6 +108,10 @@ PDF Content:
 def index():
     return render_template('index.html')
 
+@app.route('/test')
+def test():
+    return render_template('test.html')
+
 @app.route('/upload', methods=['POST'])
 def upload_file():
     if 'pdf' not in request.files:
