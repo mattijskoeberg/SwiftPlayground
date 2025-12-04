@@ -112,6 +112,10 @@ def index():
 def test():
     return render_template('test.html')
 
+@app.route('/simple')
+def simple():
+    return render_template('simple.html')
+
 @app.route('/upload', methods=['POST'])
 def upload_file():
     if 'pdf' not in request.files:
